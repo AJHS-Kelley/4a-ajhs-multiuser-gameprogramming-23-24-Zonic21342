@@ -1,0 +1,28 @@
+// Kyomari Brunswick, Hello World, v0.3
+using System;
+
+namespace helloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            // Data Types
+            // Integers -- +/- whole numbers
+            // Float -- +/- decimal numbers
+            // String -- collection of letters, numbers, chracters inside " "
+            // Boolean -- True or False values.
+
+            // DATA TYPES MUST BE DECLARED AND CANNOT CHANGE!
+            int myAge = 17;
+            int myHeight;
+            
+            float myGPA = 2.7F;
+
+            string myName = "Kyomari Brunsick";
+            bool showeredToday = false;
+        }
+    }
+}
