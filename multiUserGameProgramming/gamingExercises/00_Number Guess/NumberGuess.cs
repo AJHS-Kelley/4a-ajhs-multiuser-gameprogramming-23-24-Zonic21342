@@ -1,4 +1,4 @@
-// Kyomari Brunswick, NumberGuess, v0.03
+// Kyomari Brunswick, NumberGuess, v0.04
 /*
 Generate secret number from a defined of numbers (ex:1-10)
 Print game instructions including range and number of guesses allowed.
@@ -52,6 +52,24 @@ namespace NumberGuess
             Console.WriteLine("enter Easy, Normal, or hard.")
             difficulty = Console.ReadLine();
             //Console
+            Console.WriteLine("Minimum: " + rangeMin);
+            Console.WriteLine("Maximum: " + rangeMax);
+            Console.WriteLine("Num. Guesses: " + numGuesses);
+
+            // START MATCH
+            while (playerScore != 3 && cpuScore != 3)
+            {
+                // Any code you want to run BEFORE each round goes here.
+
+                
+                // START EACH ROUND
+                for (int i - 0; i < numGuesses ; i++)
+                {
+                   // Code to guess number goes here.
+
+                }
+                
+            }
         }
     }
 }
