@@ -1,4 +1,4 @@
-// Kyomari Brunswick, Number Guess, v0.5
+// Kyomari Brunswick, Number Guess, v0.5.5
 /*
 Generate secret number from a defined range of numbers (0-10, 0-50, 0-100)
 Print game instructions including range and num. of guesses allowed.
@@ -38,6 +38,10 @@ namespace numberGuess
             int playerScore =0;
             int cpuScore =0;
             string difficulty = "";
+            int rangeMin = -1;
+            int rangeMax = -1;
+
+            Console.WriteLine("Welcome to the Number Guess Game!\nYou'll select a difficulty next.\n");
         }
     }
 }
