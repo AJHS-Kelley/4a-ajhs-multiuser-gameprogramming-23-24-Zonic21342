@@ -1,4 +1,4 @@
-// Kyomari Brunswick, Number Guess, v0.5.5
+// Kyomari Brunswick, Number Guess, v0.6
 /*
 Generate secret number from a defined range of numbers (0-10, 0-50, 0-100)
 Print game instructions including range and num. of guesses allowed.
@@ -42,6 +42,42 @@ namespace numberGuess
             int rangeMax = -1;
 
             Console.WriteLine("Welcome to the Number Guess Game!\nYou'll select a difficulty next.\n");
+            Console.WriteLine("Easy Mode: Range is 0 - 10 with 4 gusses.\nNormal Mode: Range is 0 - 25 with 4 gusses.\nHard Mode: range is 0 - 50 with 3 guesses.\n");
+
+            // DIFICULTY SELECTION
+            Console.WriteLine("Welcome type Easy, Normal, or Hard and press ENTER.");
+            difficulty = Console.RedLine();
+            // Console.RedLine() will save to STRING by defualt.
+            Console.WriteLine("You have selected " + difficulty);
+            if (difficulty == "Easy") {
+                rangeMin = 0;
+                rangeMax = 10;
+                numberGuess = 4;
+            }else if (difficulty == "Normal") {
+                rangeMin = 0;
+                rangeMax = 25;
+                numberGuess = 4;
+            } else if (difficulty == "Hard") {
+                rangeMin = 0;
+                rangeMax = 50;
+                numberGuess = 3;
+            } else {
+                // CODE TO RUN IF NO DIFFICULTY IS SELECTED.
+                Console.WriteLine("No difficulty selected corretly, defaulting to Normal.\n");
+                rangeMin = 0;
+                rangeMax = 25;
+                numberGuess = 4;
+            }
+            Console.WriteLine("Minium: " + rangeMin);
+            Console.WriteLine("Maxium: " + rangeMax);
+            Console.WriteLine("Num. Guesses: " + numberGuesses);
+
+            // START THE PATCH
+            while (playerScore != 3 && cpuScore != 3) {
+                // Any code you want to run BEFORE each round goes here.
+                // GENERATE SECRET NUMBER
+                Random rndNum = new Random();
+            }
         }
     }
 }
