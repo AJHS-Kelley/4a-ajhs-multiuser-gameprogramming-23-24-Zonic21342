@@ -1,4 +1,4 @@
-// Kyomari Brunswick, Number Guess, v0.7
+// Kyomari Brunswick, Number Guess, v.1
 /*
 Generate secret number from a defined range of numbers (0-10, 0-50, 0-100)
 Print game instructions including range and num. of guesses allowed.
@@ -87,8 +87,30 @@ namespace numberGuess
                     Console.WriteLine("You have used " + numAttempts + " this round.\n");
                     Console.WriteLine("You must guess between " + rangeMin + "and " + rangeMax + ".\n");
                     playerGuess = System.Convert.ToInt32(Console.ReadLine());
+                    if (playerGuess == secretNumber) {
+                        // Print a success message!
+                        playerScore++;
+                        break;
+                    } else {
+                        if (playerGuess > secretNumber) {
+                            Console.WriteLine("Your guess is too high!\n");
+                        } else {
+                            Console.WriteLine("your is too low!\n");
+                        }
+                    }
+                    numAttempts++;
+                }
+                if (playerGuess != secretNumber) {
+                    cpuScore++;
+                    //Prit a round lost message to the console.
                 }
             }
+            if (playerScore >= 3) {
+                Console.WriteLine("You have won the game!\n");
+            } else {
+                Console.WriteLine("You have lost the game!\n");
+            }
+
         }
     }
 }
