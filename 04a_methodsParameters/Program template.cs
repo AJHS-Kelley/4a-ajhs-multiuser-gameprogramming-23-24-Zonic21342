@@ -1,4 +1,4 @@
-// Kyomari Brunswick, MethodsParameters, v0.3
+// Kyomari Brunswick, MethodsParameters, v1
 using System;
 
 namespace MethodsParameters
@@ -52,6 +52,23 @@ namespace MethodsParameters
             console.WriteLine("My favorite child is " + child3)
         }
 
+        // METHOD OVERLOADING
+        // Find Sum of Int
+        static int Findsum(int x, int y)
+        {
+            int sum = x + y;
+            Console.WriteLine("Sum: " + sum);
+            return sum;
+        }
+
+        // Find Sum of Double
+        static double FindSum (double x, double y)
+        {
+            double sum = x + y;
+            Console.WriteLine("Sum: " + sum);
+            return sum;
+        }
+
         static void Main(string[] args)
         {
             //MyMethod();
@@ -60,7 +77,10 @@ namespace MethodsParameters
             //MakeEggs(10, "Scrambled with cheese");
             //MakeBurger();
             //MakeBurger(10);
-            Allmychildren(child3: "Steve", child2: "Susan", child1: "Chew");
+            //Allmychildren(child3: "Steve", child2: "Susan", child1: "Chew");
+            FindSum(1, 5); // TWO INTEGERS
+            FindSum(9.5, 2.4); // TWO DOUBLE
+            FindSum(5, 2.5); // ONE OF EACH
         }
     }
 }
