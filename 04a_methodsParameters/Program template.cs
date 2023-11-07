@@ -1,4 +1,4 @@
-// Kyomari Brunswick, MethodsParameters, v0.01
+// Kyomari Brunswick, MethodsParameters, v0.02
 using System;
 
 namespace MethodsParameters
@@ -40,13 +40,19 @@ namespace MethodsParameters
             Console.WriteLine("You have ordered" + num + "eggs cooked " + style + ".\n");
         }
 
-
+        static void MakeBurger(int num = 1)
+        {
+            Console.WriteLine("I'm going to cook " + num + "cheeseburgers.\n");
+        }
         static void Main(string[] args)
         {
             //MyMethod();
             //DoubleUp();
             //MakePancakes(10);
-            MakeEggs(10, "Scrambled with cheese");
+            //MakeEggs(10, "Scrambled with cheese");
+            MakeBurger();
+            MakeBurger(10);
+
         }
     }
 }
