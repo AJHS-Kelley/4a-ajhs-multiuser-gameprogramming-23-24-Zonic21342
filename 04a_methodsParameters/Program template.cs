@@ -1,4 +1,6 @@
 // Kyomari Brunswick, MethodsParameters, v1
+// All required examples provided. 
+
 using System;
 
 namespace MethodsParameters
