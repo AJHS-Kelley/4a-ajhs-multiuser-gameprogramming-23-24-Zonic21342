@@ -1,6 +1,14 @@
-// Kyomari Brunswick, MethodsParameters, v1
+// Kyomari Brunswick, MethodsParameters, v1.1
 using System;
-
+/*
+Void Method
+Method with Return
+Method with Parameter
+Method with Multiple Parameters
+Method with Default Parameters
+Method Class using Named Arguments
+Method Overloading
+*/
 namespace MethodsParameters
 {
     class MethodsParameters
