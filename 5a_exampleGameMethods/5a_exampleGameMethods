@@ -1,4 +1,10 @@
 // Kyomari Brunswick, Program Template, v0.02
+// Game: ROCK PAPER SCISSORS
+// Need Player
+// Need CPU
+// Need Score
+// Need match counter
+// Need Random number generator
 using System;
 
 namespace UPDATEFOREACHPROGRAM
@@ -6,19 +12,19 @@ namespace UPDATEFOREACHPROGRAM
     class UPDATEFOREACHPROGRAM
 
     {
-        static void Methodone()
+        static void MethodOne()
         {
-
+            
         }
 
         static void MethodTwo()
         {
-
+            
         }
 
         static int CoinFlip()
         {
-            int coinFlip = 0; // 1 = Heads, 2 = Tails
+            int coinFlip = 0; // 1 = Rock, 2 = Paper, 3 = Scissors
             // Code to randomly pick a 1 or 2.
             if (coinFlip == 1)
             {
