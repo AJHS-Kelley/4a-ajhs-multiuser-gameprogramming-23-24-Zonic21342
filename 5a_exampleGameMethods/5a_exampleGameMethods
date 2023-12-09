@@ -17,8 +17,23 @@ namespace exampleGameMethods
     {
         static string playerPick()
         {
-            Console.WriteLine("");
+            Console.WriteLine("Type 'rock' 'paper' or 'scissors' in lowercase");
             string playerChoice = Console.ReadLine();
+
+            while (true){
+                if (playerChoice == "rock"){
+                    Console.WriteLine("You picked rock");
+                    break;
+                } else if (playerChoice == "paper"){
+                    Console.WriteLine("You picked paper");
+                    break;
+                } else if (playerChoice == "scissors"){
+                    Console.WriteLine("You picked scissors");
+                    break;
+                } else {
+                    Console.WriteLine("Try again");
+                }
+            }
 
             return playerChoice;
         }
@@ -27,6 +42,9 @@ namespace exampleGameMethods
         {
             string cpuChoice = "";
             int randomNumber = 0;
+            Random rndNum = new Random();
+            randomNumber = rndNum.Next(1, 3);
+        
             
             if (randomNumber == 1){
                 cpuChoice = "rock";
@@ -35,24 +53,34 @@ namespace exampleGameMethods
             } else if (randomNumber == 3){
                 cpuChoice = "scissors";
             }
+
+            // Console.WriteLine(randomNumber);
+            Console.WriteLine("CPU picked" + cpuChoice);
+
+
             return cpuChoice;
 
         }
 
-        static void winner(string pChoice, string cChoice)
+        static string winner(string pChoice, string cChoice)
         {
-            pass;
+            string result = "";
+            
+
+
+            return result;
         }
 
         static void score(string result)
         {
-            pass;
+            
         }
 
 
         static void Main(string[] args)
         {
-            CoinFlip();
+            playerPick();
+            cpuPick();
         }
     }
 }
