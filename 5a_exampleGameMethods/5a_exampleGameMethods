@@ -55,7 +55,7 @@ namespace exampleGameMethods
             }
 
             // Console.WriteLine(randomNumber);
-            Console.WriteLine("CPU picked" + cpuChoice);
+            Console.WriteLine("CPU picked " + cpuChoice);
 
 
             return cpuChoice;
@@ -65,8 +65,31 @@ namespace exampleGameMethods
         static string winner(string pChoice, string cChoice)
         {
             string result = "";
-            
+            if (pChoice == cChoice){
+            result = "none";
 
+            } else if (pChoice == "rock" && cChoice == "scissors"){
+            result = "player";
+            } else if (pChoice == "paper" && cChoice == "rock"){
+            result = "player";
+            } else if (pChoice == "scissors" && cChoice == "paper"){
+            result = "player";
+
+            } else if (cChoice == "rock" && pChoice == "scissors"){
+            result = "cpu";
+            } else if (cChoice == "paper" && pChoice == "rock"){
+            result = "cpu";
+            } else if (cChoice == "scissors" && pChoice == "paper"){
+            result = "cpu";
+            }
+
+            if (result == "none"){
+            Console.WriteLine("You tied");
+            } else if (result == "player"){
+            Console.WriteLine("You win!");
+            } else if (result == "cpu"){
+            Console.WriteLine("CPU Won");
+            }
 
             return result;
         }
@@ -79,8 +102,10 @@ namespace exampleGameMethods
 
         static void Main(string[] args)
         {
-            playerPick();
-            cpuPick();
+            Console.WriteLine("Time to play Rock, Paper, Scissors!");
+
+            winner(playerPick(), cpuPick());
+  
         }
     }
 }
