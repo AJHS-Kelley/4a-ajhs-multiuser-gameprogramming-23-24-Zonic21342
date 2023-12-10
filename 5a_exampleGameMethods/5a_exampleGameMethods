@@ -1,4 +1,4 @@
-// Kyomari Brunswick, ExampleGameMethods, v1.5
+// Kyomari Brunswick, ExampleGameMethods, v1.6
 using System;
 
 /*
@@ -17,6 +17,7 @@ namespace exampleGameMethods
     {
         static string playerPick()
         {
+            // Let player pick their option
             Console.WriteLine("Type 'rock' 'paper' or 'scissors' in lowercase");
             string playerChoice = Console.ReadLine();
 
@@ -40,6 +41,7 @@ namespace exampleGameMethods
 
         static string cpuPick()
         {
+            // Cpu choice with random number
             string cpuChoice = "";
             int randomNumber = 0;
             Random rndNum = new Random();
@@ -63,6 +65,7 @@ namespace exampleGameMethods
 
         static string winner(string pChoice, string cChoice)
         {
+            // Choice possibilites
             string result = "";
             if (pChoice == cChoice){
             result = "tie";
@@ -82,26 +85,18 @@ namespace exampleGameMethods
             result = "cpu";
             }
 
-            if (result == "none"){
-            Console.WriteLine("You tied");
-            } else if (result == "player"){
-            Console.WriteLine("You win!");
-            } else if (result == "cpu"){
-            Console.WriteLine("CPU Won");
-            }
-
             return result;
         }
 
         static void score(string result)
         {
-            
+            // Says who wins
             if (result == "player"){
-                Console.WriteLine("You won!")
+                Console.WriteLine("You won!");
             } else if (result == "cpu"){
-                Console.WriteLine("You lost")
+                Console.WriteLine("You lost");
             } else if (result == "tie"){
-                Console.WriteLine("You tied")
+                Console.WriteLine("You tied");
             }
         }
 
@@ -110,7 +105,7 @@ namespace exampleGameMethods
         {
             Console.WriteLine("Time to play Rock, Paper, Scissors!");
 
-            winner(playerPick(), cpuPick());
+            score(winner(playerPick(), cpuPick()));
   
         }
     }
