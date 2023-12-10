@@ -1,4 +1,4 @@
-// Kyomari Brunswick, ExampleGameMethods, v1
+// Kyomari Brunswick, ExampleGameMethods, v1.5
 using System;
 
 /*
@@ -65,7 +65,7 @@ namespace exampleGameMethods
         {
             string result = "";
             if (pChoice == cChoice){
-            result = "none";
+            result = "tie";
 
             } else if (pChoice == "rock" && cChoice == "scissors"){
             result = "player";
@@ -96,6 +96,13 @@ namespace exampleGameMethods
         static void score(string result)
         {
             
+            if (result == "player"){
+                Console.WriteLine("You won!")
+            } else if (result == "cpu"){
+                Console.WriteLine("You lost")
+            } else if (result == "tie"){
+                Console.WriteLine("You tied")
+            }
         }
 
 
