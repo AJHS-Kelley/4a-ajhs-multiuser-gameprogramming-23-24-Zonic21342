@@ -33,6 +33,7 @@ namespace exampleGameMethods
                     break;
                 } else {
                     Console.WriteLine("Try again");
+                    // Need a break or return statement to exit the loop.  
                 }
             }
 
