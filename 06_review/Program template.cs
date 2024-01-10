@@ -1,4 +1,4 @@
-// Kyomari Brunswick, Program Template, v0.01
+// Kyomari Brunswick, Program Template, v0.02
 using System;
 
 namespace ReviewProject
@@ -37,6 +37,55 @@ namespace ReviewProject
             // Single character, in SINGLE QUOTES ' '
             // 2-bytes
             char myChar = 'C';
+
+            // Type Casting -- changing = one data type to another.
+            // IMPLICIT -- happens automatically when going smaller -> larger
+            // char -> int -> long -> float -> double
+
+            int mylist = 9;
+            double myDouble = myInt;
+            Console.WriteLine(thatdouble);
+
+            // EXPLICIT -- Must be done manually when going later -> smaller.
+            // double -> float -> long -> int -> char
+            double exampleDouble = 9.756312345D;
+            int myInt = (int) myDouble;
+
+            // Conversion Methods
+            Convert.ToString() // Sring
+            Convert.ToDouble() // Double
+            Convert.ToInt32() // Integer
+            Convert.ToInt64() // Long
+
+            // Switch Statement
+            int dayOfWeek = 5;
+            switch (dayOfWeek)
+            {
+                case 1:
+                    Console.WriteLine("The day is Sunday.\n");
+                    break;
+                case 2:
+                    Console.WriteLine("The day is Monday.\n");
+                    break;
+                case 3:
+                    Console.WriteLine("The day is Tuesday.\n");
+                    break;
+                case 4:
+                    Console.WriteLine("The day is Wednesday.\n");
+                    break;
+                case 5:
+                    Console.WriteLine("The day is Thursday.\n");
+                    break;      
+                case 6:
+                    Console.WriteLine("The day is Friday.\n");
+                    break;
+                case 7:
+                    Console.WriteLine("The day is Saturday.\n");
+                    break;
+                default:
+                Console.WriteLine("No match found.\n");
+                break;
+            }
         }
     }
 }
